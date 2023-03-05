@@ -1,0 +1,58 @@
+// Variables
+@import '../utils/variables';
+// global
+.list--none .menu__links.button__menu--active {
+    color: $tertiary-color;
+    background: $secondary-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+// menu
+.menu__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+    flex-wrap: wrap;
+    gap: 8px;
+    text-align: center;
+}
+.menu__links {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    background: $background-color-quaternary;
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    padding: 6px 0;
+    transition-property: box-shadow, background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus,
+    &:active,
+    &:target {
+        color: $tertiary-color;
+        background: $secondary-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+#todo {
+    padding-right: 18px;
+    padding-left: 17px;
+}
+#sitios-web {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+#marketing {
+    padding-right: 26px;
+    padding-left: 27px;
+}
+#design {
+    padding-right: 26px;
+    padding-left: 25px;
+}
+#application {
+    padding-right: 24px;
+    padding-left: 23px;
+}

@@ -1,0 +1,320 @@
+// Variables
+@import '../utils/variables';
+@import '../utils/mixins';
+// global
+.icon__contacts {
+    margin-right: 10px;
+}
+// header
+.header {
+    display: flex;
+    &--color {
+        border-bottom: 1px solid var(--main-color-header);
+    }
+    &__container {
+        display: flex;
+    }
+    &__nav > .logo__link {
+        margin-right: 93px;
+        align-items: center;
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+    &__nav {
+        display: flex;
+    }
+    &__contacts__list {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+}
+.links {
+    color: $primary-color;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding: 32px 0;
+    text-decoration: none;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus,
+    &:active,
+    &:target {
+        color: $secondary-color;
+        outline: none;
+        fill: $secondary-color;
+    }
+    &--after {
+        position: relative;
+        transition-property: color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__header {
+        align-items: center;
+        display: inline-flex;
+        color: $quinary-color;
+    }
+    &--after:hover::after,
+    &:focus::after,
+    &--active::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        border-radius: 2px;
+        background-color: $secondary-color;
+    }
+    &,
+    &__header {
+        font-weight: 500;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        padding: 32px 0;
+        text-decoration: none;
+        transition-property: color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus,
+        &:active {
+            color: $secondary-color;
+            outline: none;
+            fill: $secondary-color;
+        }
+    }
+}
+.nav__list {
+    align-items: center;
+    display: inline-flex;
+    display: flex;
+}
+.list {
+    padding: 32px 0;
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+.list--none .links.links--active {
+    color: $secondary-color;
+}
+.contacts__list:last-child {
+    margin-left: 50px;
+
+    & > .links__header {
+        align-items: center;
+        display: inline-flex;
+    }
+}
+// footer
+.button {
+    &__footer {
+        width: 200px;
+        height: 50px;
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 39px;
+        border: none;
+        border-radius: 4px;
+        background: $secondary-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        &--active:hover {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+        &--active:hover,
+        &--active:focus,
+        &--active:active,
+        &--active:target {
+            border-radius: 4px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+    &__icon {
+        display: inline-flex;
+        fill: $tertiary-color;
+        &--end {
+            margin-left: 20px;
+        }
+    }
+    &__subscription__label {
+        font-size: 16px;
+        font-weight: 700;
+        font-size: 1.87;
+        letter-spacing: 0.06em;
+        color: $tertiary-color;
+    }
+}
+.list {
+    &__footer:first-child {
+        margin-bottom: 2px;
+    }
+}
+.footer__reference__data {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: $background-color-secondary;
+    &-websites {
+        display: flex;
+    }
+}
+.container {
+    &__footer__address {
+        margin-right: 70px;
+    }
+    &__subscription {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+.address {
+    &__location {
+        margin-bottom: 2px;
+        display: block;
+        color: $tertiary-color;
+    }
+    &__mail,
+    &__phone {
+        color: $primary-color-rgba;
+    }
+    &__mail,
+    &__location,
+    &__phone {
+        line-height: 1.71;
+        font-style: normal;
+        text-decoration: none;
+        transition-property: color, fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__location:hover,
+    &__location:focus,
+    &__location:active,
+    &__mail:hover,
+    &__mail:focus,
+    &__mail:active,
+    &__phone:hover,
+    &__phone:focus,
+    &__phone:active {
+        color: $secondary-color;
+        outline: none;
+        fill: $secondary-color;
+    }
+}
+.icons__subscription {
+    fill: $tertiary-color;
+    &--size:focus,
+    &--size:active,
+    &--size:focus,
+    &--size:target {
+        fill: $tertiary-color;
+        display: flex;
+        text-decoration: none;
+    }
+}
+.input__footer {
+    outline: none;
+    width: 358px;
+    height: 50px;
+    padding-top: 15px;
+    padding-right: 45px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    background: none;
+    color: $tertiary-color;
+    font-size: 16px;
+    line-height: 1.25;
+    @include border__primary(rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    transition-property: border-color, border-radius, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        line-height: 1.25;
+    }
+    &:focus,
+    &:hover {
+        @include border__primary($secondary-color);
+    }
+}
+.websites {
+    &__footer {
+        margin-top: 5px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    &__titles {
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: $tertiary-color;
+        margin-bottom: 20px;
+    }
+}
+.list__icons__websites {
+    transition-property: background-color, color, fill, background, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &--size {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &--size:focus,
+    &--size:active,
+    &--size:target {
+        fill: $tertiary-color;
+        padding: 12px;
+        border-radius: 100%;
+        display: flex;
+        background-color: $secondary-color;
+        outline: none;
+        text-decoration: none;
+    }
+}
+.icons__social-networks--size:focus,
+.icons__social-networks--size:active,
+.icons__social-networks--size:target {
+    fill: $tertiary-color;
+    padding: 12px;
+    border-radius: 100%;
+    display: flex;
+    background-color: $secondary-color;
+    outline: none;
+    text-decoration: none;
+}
+.footer-subscription {
+    margin-top: 5px;
+    margin-left: 93px;
+    width: 570px;
+    height: 86px;
+}
+.subscription__titles {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $tertiary-color;
+    margin-bottom: 20px;
+}
+.div__input__footer:focus-within .div__input__footer-icon .icon,
+.div__input__footer:hover .div__input__footer-icon .icon {
+    fill: $secondary-color;
+}

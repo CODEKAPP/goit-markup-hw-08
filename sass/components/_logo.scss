@@ -1,0 +1,25 @@
+// Variables
+@import '../utils/variables';
+// logo
+.logo__link {
+    font-family: var(--main-text);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active,
+    & {
+        color: $secondary-color;
+        outline: none;
+        fill: $secondary-color;
+    }
+    &__footer {
+        margin-bottom: 9px;
+        display: block;
+    }
+}

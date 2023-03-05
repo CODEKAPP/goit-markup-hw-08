@@ -1,0 +1,22 @@
+// Variables
+@import '../utils/variables';
+// Profession
+.characteristics__description {
+    line-height: 1.71;
+    font-style: normal;
+    color: $quinary-color;
+}
+.characteristics__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    &__description {
+        flex-basis: calc((100% - 90px) / 4);
+    }
+    &__titles-description {
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+}

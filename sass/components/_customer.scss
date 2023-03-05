@@ -1,0 +1,63 @@
+// Variables
+@import '../utils/variables';
+@import '../utils/mixins';
+// customers
+.customers {
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        margin-bottom: 34px;
+    }
+    &__section {
+        padding: 94px 0;
+    }
+    &__list__business {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 27px;
+    }
+}
+.customers__list__icon {
+    transition-property: border-color, border-radius, color, fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    flex-basis: calc((100% - 135px) / 6);
+    background-color: $background-color-primary;
+    fill: $quaternary-color;
+    &:focus {
+        border-radius: 4px;
+        fill: $secondary-color;
+        @include border__primary($secondary-color);
+        outline: none;
+        text-decoration: none;
+    }
+    &:hover {
+        fill: $secondary-color;
+        border-radius: 4px;
+        @include border__primary($secondary-color);
+    }
+}
+.customers__links__icons--size {
+    @include border__primary($septenary-color);
+    border-radius: 4px;
+    display: flex;
+    padding: 14px 32px;
+    justify-content: center;
+    align-items: center;
+    &:focus,
+    &:active,
+    &:target {
+        fill: $secondary-color;
+        border-radius: 4px;
+        @include border__primary($secondary-color);
+    }
+    &:focus {
+        border-radius: 4px;
+        fill: $secondary-color;
+        @include border__primary($secondary-color);
+        outline: none;
+        text-decoration: none;
+    }
+}

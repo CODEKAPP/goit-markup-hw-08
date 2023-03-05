@@ -1,0 +1,49 @@
+@import '../utils/variables';
+*,
+// Styles global
+::before,
+::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    color: $primary-color;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+.list--none {
+    list-style: none;
+}
+.button--property {
+    cursor: pointer;
+}
+.section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 55.5px;
+}
+// icons section characteristics
+.icons__div {
+    height: 120px;
+    background-color: $background-color-quaternary;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

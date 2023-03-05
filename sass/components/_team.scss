@@ -1,0 +1,65 @@
+// Variables
+@import '../utils/variables';
+// Team
+.main__section-team {
+    background-color: $background-color-quaternary;
+}
+.container__team__imagen {
+    padding: 30px 0;
+}
+.team {
+    &__titles {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        margin-bottom: 10px;
+    }
+    &__list {
+        text-align: center;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        background-color: $background-color-primary;
+    }
+    &__description {
+        font-size: 16px;
+        line-height: 1.18;
+        margin-bottom: 16px;
+        color: $quinary-color;
+    }
+}
+.list__team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-basis: calc((100% - 90px) / 4);
+}
+.icons__social-networks__team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 44px;
+    padding: 0 32px;
+}
+.icons__social-networks--size {
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list__icon__team {
+    flex-basis: calc((100% - 30px) / 4);
+    background-color: $background-color-primary;
+    fill: $quaternary-color;
+    transition-property: background-color, color, fill, background, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        background-color: $secondary-color;
+        fill: $tertiary-color;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        text-decoration: none;
+    }
+}

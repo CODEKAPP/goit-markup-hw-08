@@ -1,0 +1,7 @@
+// Variables
+@import 'variables';
+// All-Menu
+
+@mixin border__primary($color) {
+    border: 1px solid $color;
+}

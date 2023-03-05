@@ -1,0 +1,36 @@
+// Variables
+@import '../utils/variables';
+// Profession
+.section__profession {
+    padding-bottom: 94px;
+}
+.profession__list {
+    flex-wrap: wrap;
+    gap: 25.19px;
+    text-align: center;
+    display: flex;
+    &__images {
+        flex-basis: calc((100% - 50.58px) / 3);
+    }
+    &__images__container {
+        position: relative;
+        z-index: -1;
+    }
+}
+.profession__background__title {
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    padding: 27px 0;
+    color: $tertiary-color;
+}
+.profession__background--position {
+    position: absolute;
+    top: 75.25%;
+    left: 1.5px;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+}
