@@ -28,3 +28,178 @@ GitHub-Pages
 https://codekapp.github.io/goit-markup-hw-03/
 
 */
+
+// body {
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+//     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+//   line-height: 1.5;
+//   color: #212121;
+//   background-color: #fff;
+// }
+
+.container2 {
+    display: flex;
+}
+// .container2 {
+//   min-width: 320px;
+//   max-width: 1170px;
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+// .page-header {
+//     box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+// }
+
+// .page-header .container2 {
+//     min-height: 80px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+// }
+
+// .menu {
+//     display: flex;
+//     padding: 0;
+//     margin: 0;
+//     list-style: none;
+// }
+
+@media (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+}
+
+// .menu .link {
+//     padding: 10px;
+//     color: inherit;
+//     text-decoration: none;
+// }
+
+// .menu .link:hover,
+// .menu .link:focus {
+//     text-decoration: underline;
+// }
+
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+    // position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // left: -575;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    background-color: #fff;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: $secondary-color;
+
+}
+
+.mobile-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+// .mobile-menu .link {
+//     display: block;
+//     margin-bottom: 32px;
+//     // color: red;
+//     text-decoration: none;
+// }
+.list__menu__header {
+    text-decoration: none;
+    color: $secondary-color;
+
+
+    // padding-top: 68px;
+    // padding-bottom: 48px;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+.menu__social-networks {
+    position: relative;
+}
+.menu-active::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 18px;
+    /* right: 65px; */
+    left: 115%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    // background-color: red;
+
+    // :not(:last-child)
+}
+.mobile-menu .link {
+    display: block;
+    margin-bottom: 32px;
+    // color: red;
+}
+
+.menu__header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.links {
+    @include mobile {
+        padding: 0;
+    }
+}
+.links__header {
+    @include mobile {
+        padding: 0;
+    }
+}
+.websites__menu {
+    display: flex;
+}

@@ -1,10 +1,22 @@
 // Variables
 @import '../utils/variables';
+@import '../utils/mixins';
 // Team
 .main__section-team {
     background-color: $background-color-quaternary;
+     @include mobile {
+        width: auto;
+        
+    }
+    @include tablet {
+        width: auto;
+    }
+    @include desktop {
+        width: auto;
+    }
+
 }
-.container__team__imagen {
+.container__team__image {
     padding: 30px 0;
 }
 .team {
@@ -31,7 +43,21 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc((100% - 90px) / 4);
+    // flex-basis: calc((100% - 90px) / 4);
+    @include tablet {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+        // display: none;
+        justify-content: center;
+    }
+    @include desktop {
+        flex-basis: calc((100% - 90px) / 4);
+    }
+    @include mobile {
+        // margin-bottom: 30px;
+        // display: none;
+        justify-content: center;
+        
+    }
 }
 .icons__social-networks__team {
     display: flex;

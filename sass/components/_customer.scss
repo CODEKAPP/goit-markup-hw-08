@@ -23,7 +23,23 @@
     transition-property: border-color, border-radius, color, fill, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    flex-basis: calc((100% - 135px) / 6);
+
+    @include tablet {
+        flex-basis: calc((100% - 3 * 30px) / 3);
+        // display: none;
+        // justify-content: center;
+    
+    }
+    @include desktop {
+        flex-basis: calc((100% - 135px) / 6);
+    }
+    @include mobile {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+
+        // margin-bottom: 30px;
+        // display: none;
+    }
+    // flex-basis: calc((100% - 135px) / 6);
     background-color: $background-color-primary;
     fill: $quaternary-color;
     &:focus {

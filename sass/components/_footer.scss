@@ -53,17 +53,21 @@
     }
 }
 .footer__reference__data {
+    display: flex;
+    flex-wrap: wrap;
+
     padding-top: 60px;
     padding-bottom: 60px;
     background: $background-color-secondary;
     &-websites {
         display: flex;
+        flex-wrap: wrap;
     }
 }
 .container {
-    &__footer__address {
-        margin-right: 70px;
-    }
+    // &__footer__address {
+    //     margin-right: 70px;
+    // }
     &__subscription {
         display: flex;
         flex-wrap: wrap;
@@ -73,7 +77,8 @@
 .address {
     &__location {
         margin-bottom: 2px;
-        display: block;
+        // display: block;
+
         color: $tertiary-color;
     }
     &__mail,
@@ -220,4 +225,103 @@
 .div__input__footer:focus-within .div__input__footer-icon .icon,
 .div__input__footer:hover .div__input__footer-icon .icon {
     fill: $secondary-color;
+}
+
+.address__location {
+    @include tablet {
+        padding-top: 19px;
+
+        text-align: center;
+    }
+    @include mobile {
+        padding-top: 19px;
+        text-align: center;
+    }
+}
+.list__footer {
+    @include tablet {
+        margin-top: 12px;
+        text-align: center;
+    }
+    @include mobile {
+        margin-top: 12px;
+        text-align: center;
+    }
+}
+.logo__link__footer {
+    @include tablet {
+        justify-content: center;
+    }
+    @include mobile {
+        justify-content: center;
+    }
+}
+.logo__link__footer {
+    @include tablet {
+        justify-content: center;
+    }
+    @include mobile {
+        justify-content: center;
+    }
+}
+.footer__reference__data {
+    @include tablet {
+        height: 464px;
+    }
+}
+
+
+.footer__reference__data-websites {
+    @include tablet {
+        justify-content: space-around;
+        align-items: flex-start;
+
+        text-align: center;
+    }
+    @include mobile {
+        align-content: center;
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+.container__footer__address {
+    @include tablet {
+        margin-right: 0;
+    }
+    @include desktop {
+        margin-right: 70px;
+    }
+    @include mobile {
+        margin-right: 0;
+    }
+}
+.websites__footer {
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+.footer-subscription {
+    @include tablet {
+        margin-left: 0;
+    }
+
+    @include mobile {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+}
+.container__subscription {
+    @include tablet {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
 }

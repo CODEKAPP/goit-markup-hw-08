@@ -1,5 +1,6 @@
 // Variables
 @import '../utils/variables';
+@import '../utils/mixins';
 // global
 .list--none .menu__links.button__menu--active {
     color: $tertiary-color;
@@ -40,7 +41,7 @@
     padding-right: 18px;
     padding-left: 17px;
 }
-#sitios-web {
+#websites {
     padding-right: 24px;
     padding-left: 24px;
 }

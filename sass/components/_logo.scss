@@ -1,5 +1,6 @@
 // Variables
 @import '../utils/variables';
+@import '../utils/mixins';
 // logo
 .logo__link {
     font-family: var(--main-text);
@@ -20,6 +21,6 @@
     }
     &__footer {
         margin-bottom: 9px;
-        display: block;
+        display: flex;
     }
 }

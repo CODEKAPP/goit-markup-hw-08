@@ -1,17 +1,37 @@
 // Variables
 @import '../utils/variables';
+@import '../utils/mixins';
 // Profession
 .section__profession {
     padding-bottom: 94px;
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
+.profession__list__images {
+    @include tablet {
+        // flex-basis: calc((100% - 2 * 30px) / 2);
+        display: none;
+    }
+    @include desktop {
+        flex-basis: calc((100% - 3 * 30px) / 3);
+    }
+    @include mobile {
+        // margin-bottom: 30px;
+        display: none;
+    }
 }
 .profession__list {
     flex-wrap: wrap;
     gap: 25.19px;
     text-align: center;
     display: flex;
-    &__images {
-        flex-basis: calc((100% - 50.58px) / 3);
-    }
+    // &__images {
+    //     flex-basis: calc((100% - 50.58px) / 3);
+    // }
     &__images__container {
         position: relative;
         z-index: -1;
